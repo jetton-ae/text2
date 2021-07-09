@@ -51,6 +51,9 @@ section {
     visibility: hidden;
 }
 
+
+/* 可以不用margin就讓自從行尾開始排列 */
+
 .right_flex {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -59,51 +62,8 @@ section {
     text-align: right;
 }
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
-    /* 1 */
-    ;
-}
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-    ;
-}
-
-.clearfix:after {
-    clear: both;
-}
+/* 可以不用margin就讓自從行尾開始排列 */
 
 
 /* ==========================================================================
@@ -147,6 +107,9 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
+
+/* 使行內元素盒模型與其行內元素容器垂直對齊例如，用於垂直對齊一行文本的內的圖片 */
+
 audio,
 canvas,
 iframe,
@@ -156,22 +119,18 @@ video {
     vertical-align: middle;
 }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+
+/* 使行內元素盒模型與其行內元素容器垂直對齊例如，用於垂直對齊一行文本的內的圖片 */
+
+
+/*  允許用戶在垂直方向上調整元素的大小。*/
 
 textarea {
     resize: vertical;
 }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+
+/*  允許用戶在垂直方向上調整元素的大小。*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -186,19 +145,21 @@ body {
 
 .btn {
     display: inline-block;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     border: none;
     background: #156bf3;
     /* Old browsers */
     /* FF3.6-15 */
+    /* =============================漸層寫法 ================================*/
     background: -webkit-linear-gradient(left, #156bf3 0%, #1af0a4 100%);
     /* Chrome10-25,Safari5.1-6 */
     background: -webkit-gradient(linear, left top, right top, from(#156bf3), to(#1af0a4));
     background: -o-linear-gradient(left, #156bf3 0%, #1af0a4 100%);
     background: linear-gradient(to right, #156bf3 0%, #1af0a4 100%);
+    /* =============================漸層寫法 ================================*/
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#156bf3', endColorstr='#1af0a4', GradientType=1);
-    /* IE6-9 */
     color: #fff;
     font-size: 12px;
     line-height: 1;
@@ -206,11 +167,17 @@ body {
     text-align: center;
     width: 200px;
     max-width: 100%;
+    /* ============================動畫速率
+    =============================== */
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    /* ============================動畫速率
+    =============================== */
     text-decoration: none;
+    /* ==========滑鼠游標樣式================= */
     cursor: pointer;
+    /* ==========滑鼠游標樣式================= */
 }
 
 .btn.blue {
@@ -249,18 +216,24 @@ body {
     position: absolute;
     top: -webkit-calc(50% + 110px);
     top: calc(50% + 110px);
+    /* ==============指定元素由參考點縱向移動 -50% 距離。================ */
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    /* ==============指定元素由參考點縱向移動 -50% 距離。================ */
     left: 125px;
     z-index: 10;
 }
 
 .main_section .main_swiper .content .title {
     font-size: 36px;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     line-height: 42px;
+    /* 控制字元間距 */
     letter-spacing: 0.075em;
+    /* 控制字元間距 */
 }
 
 .main_section .main_swiper .content p {
@@ -314,7 +287,9 @@ body {
     line-height: 30px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .commercial_residential .commercial_residential_wrapper .item p {
@@ -395,7 +370,9 @@ body {
     line-height: 30px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .residential_section .residential_wrapper .item p {
@@ -476,7 +453,9 @@ body {
     line-height: 30px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .commercial_section .commercial_wrapper .item p {
@@ -533,7 +512,9 @@ body {
     font-size: 36px;
     letter-spacing: 0.075em;
     line-height: 42px;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     padding: 0 20px;
     margin: 0 0 40px;
 }
@@ -557,7 +538,9 @@ body {
 .services_section .services_wrapper .item .description>.title {
     color: #18e0bd;
     font-size: 14px;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .services_section .services_wrapper .item .img {
@@ -606,7 +589,9 @@ body {
 
 .testimonials_section .testimonials_wrapper .title h3,
 .testimonials_section .testimonials_wrapper .title {
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     color: #fff;
     font-size: 36px;
     letter-spacing: 0.075em;
@@ -789,7 +774,9 @@ body {
 
 .header_wrapper .header_menu ul li a {
     color: #fff;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-decoration: none;
 }
 
@@ -808,7 +795,9 @@ body {
 
 .header_wrapper .header_menu ul.mobile_add_menu li a {
     color: #fff;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-decoration: none;
     font-size: 10px !important;
 }
@@ -897,7 +886,9 @@ body {
 }
 
 .footer_wrapper .title {
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     margin-bottom: 40px;
 }
 
@@ -944,7 +935,9 @@ body {
     display: inline-block;
     vertical-align: top;
     width: -webkit-calc(100% - 400px);
+    /* 意思是 % 的寬度 - px */
     width: calc(100% - 400px);
+    /* 意思是 % 的寬度 - px */
 }
 
 .footer_wrapper .footer_form .message_form {
@@ -1120,7 +1113,9 @@ body {
 }
 
 .footer_wrapper .footer_nav ul li a {
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     font-size: 10px;
     color: #fff;
     text-decoration: none;
@@ -1135,7 +1130,9 @@ body {
     line-height: 30px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .page_text_wrapper h2 {
@@ -1143,7 +1140,9 @@ body {
     line-height: 26px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .page_text_wrapper h3 {
@@ -1151,7 +1150,9 @@ body {
     line-height: 26px;
     letter-spacing: 0.075em;
     margin: 0;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
     text-transform: uppercase;
+    /* 這個關鍵字強制所有字符被轉換為大寫。 */
 }
 
 .page_text_wrapper p {
